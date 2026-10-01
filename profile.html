@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile — Dilsight</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .profile-section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-card {
+            width: 100%;
+            max-width: 650px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #10264b;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .profile-card h1 {
+            margin-bottom: 5px;
+        }
+
+        #profileUsername {
+            color: #687080;
+            margin-bottom: 10px;
+        }
+
+        #profileBio {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 25px 0;
+        }
+
+        .profile-info div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        #editProfileForm {
+            text-align: left;
+        }
+
+        #editProfileForm label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        #editProfileForm input,
+        #editProfileForm textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        #editProfileForm textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Dilsight
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="write.html">
+                Write
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="profile-section">
+
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+                    <span id="profileInitial">
+                        U
+                    </span>
+                </div>
+
+                <h1 id="profileName">
+                    Loading...
+                </h1>
+
+                <p id="profileUsername">
+                    @username
+                </p>
+
+                <p id="profileBio">
+                    Your bio will appear here.
+                </p>
+
+                <div class="profile-info">
+
+                    <div>
+                        <strong>
+                            Stories
+                        </strong>
+
+                        <span id="storyCount">
+                            0
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Joined
+                        </strong>
+
+                        <span id="joinDate">
+                            —
+                        </span>
+                    </div>
+
+                </div>
+
+                <button id="editProfileBtn" class="write-story-btn">
+                    Edit Profile
+                </button>
+                <div id="editProfileForm" style="display:none; margin-top:20px;">
+
+                    <label>Full Name</label>
+                    <input type="text" id="editFullName" placeholder="Enter your name">
+
+                    <label>Username</label>
+                    <input type="text" id="editUsername" placeholder="Enter username">
+
+                    <label>Bio</label>
+                    <textarea id="editBio" placeholder="Write something about yourself"></textarea>
+
+                    <button id="saveProfileBtn" class="write-story-btn">
+                        Save Profile
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

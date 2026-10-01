@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Article — Dilsight</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Dil<span>sight</span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="#">Poetry</a>
+            <a href="#">Movie</a>
+            <a href="#">Travel</a>
+            <a href="#">Spirituality</a>
+            <a href="#">Personal Essays</a>
+
+        </nav>
+
+        <div class="nav-right">
+
+            <button class="login-btn" onclick="window.location.href='login.html'">
+
+                Login
+
+            </button>
+
+            <button class="write-btn" onclick="window.location.href='write.html'">
+
+                Write
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="article-page">
+
+        <article class="full-article">
+
+            <div id="articleCategory" class="article-category">
+            </div>
+
+
+            <h1 id="articleTitle">
+                Loading...
+            </h1>
+
+
+            <div class="article-meta">
+
+                <span id="articleAuthor"></span>
+
+                <span>•</span>
+
+                <span id="articleDate"></span>
+
+                <span>•</span>
+
+                <span id="articleLanguage"></span>
+
+            </div>
+
+
+            <img id="articleImage" class="article-image" src="" alt="Article image">
+
+
+            <div id="articleContent" class="article-content">
+            </div>
+            <button id="editArticleBtn" class="auth-main-btn" style="display:none;">
+                Edit Article
+            </button>
+            <button id="deleteArticleBtn" class="auth-main-btn" style="display:none;">
+                Delete Article
+            </button>
+            <button id="shareArticleBtn" class="auth-main-btn">
+                Share Article
+            </button>
+            <span id="articleViews" class="article-views">
+                👁️ 0 Views
+            </span>
+            <!-- ================= COMMENTS ================= -->
+
+            <section class="comments-section">
+
+                <h2>💬 Comments</h2>
+
+                <div class="comment-form">
+
+                    <textarea id="commentInput" placeholder="Write a comment..." rows="4">
+        </textarea>
+
+                    <button id="postCommentBtn" class="auth-main-btn">
+                        Post Comment
+                    </button>
+
+                </div>
+
+                <div id="commentsList">
+                </div>
+
+            </section>
+        </article>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

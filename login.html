@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login — Dilsight</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <a href="index.html" class="auth-logo">
+            Dilsight
+        </a>
+
+        <div class="auth-card">
+
+            <h1 id="loginTitle">Welcome Back</h1>
+
+            <p class="auth-subtitle">
+                Login to continue reading and writing.
+            </p>
+
+
+            <form id="loginForm">
+
+                <label>Email or Username</label>
+
+                <input type="text" id="loginUser" placeholder="Enter email or username" required>
+
+
+                <label>Password</label>
+
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                <a href="forgot-password.html" class="forgot-password">
+                    Forgot Password?
+                </a>
+
+
+
+                <button type="submit" class="auth-main-btn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+            <p class="auth-bottom">
+
+                Don't have an account?
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
